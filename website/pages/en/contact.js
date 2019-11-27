@@ -60,15 +60,15 @@ function Help(props) {
       case "LinkedIn":
       case "Stackoverflow":
         return (
-          <p style={contactItemStyle}>
+          <div key={link.name} style={contactItemStyle}>
             <b>{link.name}</b>: <a href={link.content}>view</a>
-          </p>
+          </div>
         );
       default:
         return (
-          <p style={contactItemStyle}>
+          <div key={link.name} style={contactItemStyle}>
             <b>{link.name}</b>: {link.content}
-          </p>
+          </div>
         );
         break;
     }
@@ -81,8 +81,8 @@ function Help(props) {
           <header className="postHeader">
             <h1>Contact Info:</h1>
           </header>
-          <p>If you have any query, please let me know via:</p>
-          <p class="items">{contact}</p>
+          <p key='des' >If you have any query, please let me know via:</p>
+          <p key='contact' className="items">{contact}</p>
         </div>
       </Container>
     </div>
