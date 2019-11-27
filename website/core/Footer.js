@@ -24,7 +24,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="nav-footer" id="footer">
-        <section className="sitemap">
+        <section  style={{ display: 'none' }} className="sitemap">
           <div>
             <h5>Blog</h5>
             <a href={this.docUrl('doc1.html', this.props.language)}>
