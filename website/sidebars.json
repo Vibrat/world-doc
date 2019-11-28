@@ -1,8 +1,9 @@
 {
   "docs": {
-    "Welcome": ["intro"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "Intro": ["intro"],
+    "Python": ["doc2"],
+    "Algorithm": ["doc3"],
+    "Kubernetes": ["doc3"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
