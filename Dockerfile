@@ -1,10 +1,17 @@
-FROM node:lts
+FROM php:7.0-apache as base
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt-get update && apt-get install -y nodejs
+RUN apt-get update && npm install -g yarn
 
 WORKDIR /app/website
 
-EXPOSE ${PORT}
 COPY ./docs /app/docs
 COPY ./website /app/website
-RUN yarn install
 
-CMD ["yarn", "start"]
+RUN yarn install
+RUN yarn build
+RUN cp -r build/Tuidoc/* /var/www/html
+RUN chmod o+x /app/website/build/Tuidoc
+
+EXPOSE ${PORT}
+RUN service apache2 restart
