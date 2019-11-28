@@ -14,6 +14,5 @@ RUN cp -r build/Tuidoc/* /var/www/html
 RUN chmod o+x /app/website/build/Tuidoc
 
 EXPOSE ${PORT}
-RUN sed -i "s/80/$PORT/g" /etc/apache2/sites-enabled/000-default.conf
 RUN service apache2 restart
 WORKDIR /var/www/html
