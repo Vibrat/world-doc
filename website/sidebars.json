@@ -1,7 +1,8 @@
 {
   "docs": {
     "Intro": ["intro"],
-    "Python": ["doc2"],
+    "Python": [],
+    "Machine Learning": ["ml_support_vector_machine"],
     "Algorithm": ["doc3"],
     "Kubernetes": ["doc3"]
   },
