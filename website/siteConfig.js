@@ -39,6 +39,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'intro', label: 'Docs'},
+    {href: 'http://me.tuidoc.com', label: 'Me'},
     {blog: false },
     // {page: 'contact', label: 'Contact'},
   ],
